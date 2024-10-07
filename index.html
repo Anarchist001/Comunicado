@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado de la UEA (Unión de Españoles Anarquistas)</title>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            var player = new YT.Player('videoYT', {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function onPlayerStateChange(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+                window.close();
+            }
+        }
+    </script>
+    <script src="https://www.youtube.com/iframe_api"></script> 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Georgia', serif; 
+            background-color: #000000; 
+            margin: 0;
+            padding: 20px;
+            color: #00FF00;
+        }
+        #container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #1a1a1a; 
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            padding: 20px;
+        }
+        #video {
+            margin-right: 20px;
+        }
+        #message {
+            max-width: 400px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="video">
+            <iframe id="videoYT" width="800" height="450" src="https://www.youtube.com/embed/RLlUu6iXyP8?enablejsapi=1&autoplay=1" 
+                    title="Video de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </div>
+        <div id="message">
+            <h2>Comunicado de la UEA (Unión de Españoles Anarquistas)</h2>
+            <p>
+                En la actualidad el arquismo es el modelo de sociedad más rentable a la hora de convivir, el anarquismo busca igualdad, paz y una convivencia igualitaria y de respeto mutuo, valores que por lo que tenemos en tendido esta institución promueve. En un futuro indicaremos porqué las institucines salesianas nos transmiten confianza gracias a su trabajo y dedicación con los niños, el futuro de la sociedad...
+            </p>
+        </div>
+    </div>
+</body>
+</html>
